@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">NYTApiTest</string>
+
+    <string name="nyt_movies_api_key">d428f3067aa541c69d21d20e63612bb4</string>
+    <string name="nyt_articles_api_key">d428f3067aa541c69d21d20e63612bb4</string>
+
+    <!-- Main Activity-->
+    <string name="text_reviews">Reviews</string>
+    <string name="text_search">Search</string>
+    <string name="text_toast_length_error">Type at least 3 characters</string>
+
+    <!-- Sync Adapter -->
+
+    <!-- SyncAdapter related -->
+    <string name="sync_account_type">nytapitest.epresidential.com</string>
+    <string name="content_authority">com.epresidential.nytapitest.app</string>
+
+</resources>
