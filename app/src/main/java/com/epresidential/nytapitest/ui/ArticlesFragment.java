@@ -119,7 +119,7 @@ public class ArticlesFragment extends Fragment implements LoaderManager.LoaderCa
         NYTArticlesClient.with(getContext()).getArticles(page, new JsonHttpResponseListener<Response>(Response.class) {
             @Override
             public void onFailure(HttpResponseException ex) {
-                //show message
+                Log.e(LOG_TAG, ex.getMessage(), ex);
             }
 
             @Override
