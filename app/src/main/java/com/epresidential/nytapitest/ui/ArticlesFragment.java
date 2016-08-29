@@ -91,7 +91,6 @@ public class ArticlesFragment extends Fragment implements LoaderManager.LoaderCa
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 // CursorAdapter returns a cursor at the correct position for getItem()
                 Cursor cursor = (Cursor) adapterView.getItemAtPosition(position);
-                Log.d(LOG_TAG, "Item clicked");
                 //Calls the listener method to show the action bar notification
                 mListener.onItemSelected(cursor, position);
             }

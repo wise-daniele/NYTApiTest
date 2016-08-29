@@ -46,7 +46,6 @@ public class NYTArticlesClient extends NYTRestClient {
     */
 
     public synchronized void getArticles(int page, HttpResponseListener listener){
-        Log.d(LOG_TAG, "Get Articles");
         String pageParam = "page=" + page;
         String sortParam = "sort=newest";
         String apiKeyParam = "api-key=" + getContext().getString(R.string.nyt_articles_api_key);

@@ -57,7 +57,6 @@ public class Client {
 
             @Override
             protected HttpResponse doInBackground(Void... voids) {
-                Log.d(LOG_TAG, "In DoInBackground");
                 return getSync(url);
             }
 
@@ -107,7 +106,6 @@ public class Client {
             // getting response
             int code = conn.getResponseCode();
             if (code == HttpURLConnection.HTTP_OK) {
-                Log.d(LOG_TAG, "HTTP REQUEST OK");
                 in = new BufferedInputStream(conn.getInputStream());
                 // building json string from stream
                 StringBuilder sb = new StringBuilder();
@@ -116,11 +114,9 @@ public class Client {
                     sb.append((char) b);
                 }
                 String json = sb.toString().replace("\n","");
-                Log.d(LOG_TAG, method + " RES " + json);
                 response = HttpResponse.success(json);
                 in.close();
             } else {
-                Log.d(LOG_TAG, "HTTP REQUEST NOT OK");
                 response = HttpResponse.failure(new HttpResponseException(code, "server error"));
             }
         } catch (MalformedURLException ex) {

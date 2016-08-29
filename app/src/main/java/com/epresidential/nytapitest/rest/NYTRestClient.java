@@ -39,7 +39,6 @@ public class NYTRestClient extends Client {
     protected void get(String url, HttpResponseListener listener, boolean async, HttpHeader... headers) {
 
         if (async) {
-            Log.d(LOG_TAG, "Async call");
             getAsync(url, listener, headers);
         } else {
             HttpResponse response = getSync(url, headers);

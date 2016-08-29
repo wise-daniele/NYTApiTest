@@ -56,7 +56,6 @@ public class ArticlesAdapter extends CursorAdapter {
         String headline = cursor.getString(ArticlesFragment.COL_MAIN_HEADLINE);
         viewHolder.textArticleHeadline.setText(headline);
         viewHolder.textArticlePubdate.setText(pubDate);
-        Log.d(LOG_TAG, "Image from db " + imageUrl);
         if(imageUrl != null){
             Picasso.with(context).load(NYT_IMAGES_BASE_URL + imageUrl).into(viewHolder.imageArticle);
         }

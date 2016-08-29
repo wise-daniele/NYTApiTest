@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements ArticlesFragment.
 
     @Override
     public void onItemSelected(Cursor cursor, int position) {
-        Log.d(LOG_TAG, "Build Notification");
         String imageUrl = cursor.getString(ArticlesFragment.COL_IMAGE_URL);
         String pubDate = cursor.getString(ArticlesFragment.COL_PUB_DATE);
         String webUrl = cursor.getString(ArticlesFragment.COL_WEB_URL);
