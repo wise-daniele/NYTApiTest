@@ -1,7 +1,6 @@
 package com.epresidential.nytapitest.ui;
 
-import android.app.Activity;
-import android.app.NotificationManager;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -18,15 +17,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.epresidential.nytapitest.R;
 import com.epresidential.nytapitest.data.NYTContract;
 import com.epresidential.nytapitest.model.Article;
-import com.epresidential.nytapitest.model.NYTDocs;
 import com.epresidential.nytapitest.model.Response;
 import com.epresidential.nytapitest.rest.HttpResponseException;
 import com.epresidential.nytapitest.rest.JsonHttpResponseListener;
@@ -34,7 +29,6 @@ import com.epresidential.nytapitest.rest.NYTArticlesClient;
 import com.epresidential.nytapitest.ui.adapter.ArticlesAdapter;
 import com.epresidential.nytapitest.utils.StoreUtils;
 
-import java.util.HashMap;
 import java.util.Vector;
 
 /**
@@ -115,7 +109,7 @@ public class ArticlesFragment extends Fragment implements LoaderManager.LoaderCa
             return;
         }
 
-        NYTArticlesClient.with(getContext()).getArticles(page, new JsonHttpResponseListener<Response>(Response.class) {
+        NYTArticlesClient.with(getActivity().getApplicationContext()).getArticles(page, new JsonHttpResponseListener<Response>(Response.class) {
             @Override
             public void onFailure(HttpResponseException ex) {
                 Log.e(LOG_TAG, ex.getMessage(), ex);
