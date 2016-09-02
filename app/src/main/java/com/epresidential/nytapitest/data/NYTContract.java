@@ -16,7 +16,7 @@ public class NYTContract {
     // Path to the table Article
     public static final String PATH_ARTICLE = "article";
 
-    /* Inner class that defines the table contents of the location table */
+    /* Inner class that defines the table contents of the Article table */
     public static final class ArticleEntry implements BaseColumns {
 
         public static final Uri CONTENT_URI =

@@ -33,8 +33,7 @@
         <provider
             android:authorities="@string/content_authority"
             android:name=".data.NYTProvider"
-            android:exported="false"
-            android:syncable="true" />
+            android:exported="false" />
 
     </application>
 

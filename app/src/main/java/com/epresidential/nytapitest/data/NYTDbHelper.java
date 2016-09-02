@@ -4,7 +4,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import com.epresidential.nytapitest.data.NYTContract.ArticleEntry;
-import com.epresidential.nytapitest.model.Article;
 
 /**
  * Created by daniele on 23/08/16.
