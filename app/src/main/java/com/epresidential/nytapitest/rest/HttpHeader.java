@@ -1,5 +1,7 @@
 package com.epresidential.nytapitest.rest;
 
+import com.epresidential.nytapitest.model.JsonObject;
+
 /**
  * Created by daniele on 22/08/16.
  */
