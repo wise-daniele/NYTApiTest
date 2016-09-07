@@ -32,13 +32,19 @@ public class MainActivity extends AppCompatActivity implements ArticlesFragment.
         setContentView(R.layout.activity_main);
         //get last position of listview in order to automatically scroll the listview
         int position = getIntent().getIntExtra(ITEM_POSITION_EXTRA, ListView.INVALID_POSITION);
-        ArticlesFragment articlesFragment = new ArticlesFragment();
-        articlesFragment.setCurrentListPosition(position);
-        getSupportFragmentManager()
-                .beginTransaction()
-                .add(R.id.main_fragment_container, articlesFragment, ArticlesFragment.FRAGMENT_TAG)
-                .disallowAddToBackStack()
-                .commit();
+
+        if (findViewById(R.id.main_fragment_container) != null) {
+            if (savedInstanceState != null) {
+                return;
+            }
+            ArticlesFragment articlesFragment = new ArticlesFragment();
+            articlesFragment.setCurrentListPosition(position);
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.main_fragment_container, articlesFragment, ArticlesFragment.FRAGMENT_TAG)
+                    .disallowAddToBackStack()
+                    .commit();
+        }
     }
 
     @Override
