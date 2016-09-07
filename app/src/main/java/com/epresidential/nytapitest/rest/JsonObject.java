@@ -1,4 +1,4 @@
-package com.epresidential.nytapitest.model;
+package com.epresidential.nytapitest.rest;
 
 import java.io.Serializable;
 

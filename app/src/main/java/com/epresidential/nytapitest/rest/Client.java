@@ -4,8 +4,6 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.epresidential.nytapitest.model.JsonObject;
-
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
